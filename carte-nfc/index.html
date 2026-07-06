@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte NFC Chez Mex — recto-verso 85,6 × 54 mm (print-ready)</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============ Format carte : CR80 — 85,6 × 54 mm ============ */
+@page{ size: 85.6mm 54mm; margin: 0; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;background:#2b2b2b;color:#fff}
+
+.card{
+  width:85.6mm;height:54mm;position:relative;overflow:hidden;
+  border-radius:3.18mm; /* rayon standard CR80, à écran seulement (voir print) */
+}
+
+/* ---------- RECTO ---------- */
+.recto{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:5mm 5mm 4.5mm;
+  background:radial-gradient(120% 140% at 78% 12%, #ff2b1f 0%, #e3000e 40%, #7c0008 100%);
+}
+.recto .logo{height:13mm;width:auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.recto .tag{font-family:'Lilita One',cursive;font-size:4.6mm;line-height:1.05;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.25);margin-top:1.5mm}
+.recto .tag em{color:#f7be27;font-style:normal}
+.recto .sub{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.4mm;font-size:2.4mm;color:#ffe2e2;margin-top:1mm}
+.recto .meta{font-family:'Oswald',sans-serif;font-size:2.5mm;line-height:1.55;color:#fff}
+.recto .meta .b{color:#f7be27;font-weight:600}
+.recto .liseret{position:absolute;right:0;top:0;bottom:0;width:1.6mm;background:#f7be27}
+
+/* ---------- VERSO ---------- */
+.verso{
+  background:#fff;color:#161616;display:flex;align-items:stretch;
+}
+.verso .bande{width:1.6mm;background:#f7be27;flex:none}
+.verso .gauche{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3mm 2mm}
+.verso .qr{width:27mm;height:27mm}
+.verso .cta{font-family:'Lilita One',cursive;color:#e3000e;font-size:3.4mm;text-align:center;line-height:1.05;margin-top:1.6mm}
+.verso .scan{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:2mm;color:#777;margin-top:.6mm}
+.verso .droite{flex:1.1;background:#161616;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:1.6mm;padding:4mm 4mm 4mm 4.5mm}
+.verso .droite .titre{font-family:'Lilita One',cursive;color:#f7be27;font-size:3.6mm;line-height:1}
+.verso .droite .item{font-family:'Oswald',sans-serif;font-size:2.35mm;line-height:1.45;color:#eee}
+.verso .droite .item .b{color:#f7be27;font-weight:600}
+.verso .droite .item .k{display:block;text-transform:uppercase;letter-spacing:.3mm;font-size:1.75mm;color:#999}
+
+/* ---------- Habillage écran (masqué à l'impression) ---------- */
+.atelier{max-width:960px;margin:0 auto;padding:34px 20px 60px}
+.atelier h1{font-family:'Lilita One',cursive;font-weight:400;font-size:1.7rem;color:#f7be27;margin-bottom:6px}
+.atelier .note{color:#bbb;font-size:.9rem;max-width:70ch;margin-bottom:8px}
+.atelier .note b{color:#fff}
+.planche{display:flex;gap:34px;flex-wrap:wrap;margin-top:26px;align-items:flex-start}
+.face .etiquette{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;color:#999;margin-bottom:10px}
+.face .card{box-shadow:0 18px 44px rgba(0,0,0,.5);transform:scale(1.6);transform-origin:top left;margin-bottom:calc(54mm * .6);margin-right:calc(85.6mm * .6)}
+@media(max-width:700px){.face .card{transform:scale(1.05);margin-bottom:calc(54mm * .05);margin-right:calc(85.6mm * .05)}}
+.impression{margin-top:38px;background:#1d1d1d;border:1px solid #333;border-radius:12px;padding:16px 20px;font-size:.85rem;color:#ccc;max-width:70ch}
+.impression b{color:#f7be27}
+
+@media print{
+  body{background:#fff}
+  .atelier{max-width:none;padding:0;margin:0}
+  .atelier h1,.atelier .note,.impression,.face .etiquette{display:none}
+  .planche{display:block;margin:0;gap:0}
+  .face .card{transform:none;box-shadow:none;border-radius:0;margin:0}
+  .face-recto{page-break-after:always}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<div class="atelier">
+  <h1>Carte NFC — Chez Mex</h1>
+  <p class="note">Recto-verso au format carte bancaire <b>85,6 × 54 mm</b> (CR80). La puce NFC et le QR code renvoient vers la commande en ligne — un seul geste pour le client.</p>
+
+  <div class="planche">
+    <div class="face face-recto">
+      <div class="etiquette">Recto</div>
+      <div class="card recto">
+        <div>
+          <img class="logo" src="logo.png" alt="Chez Mex">
+          <div class="tag">Votre fast-food<br>au <em>Lac du Paradis</em></div>
+          <div class="sub">Tacos · Burgers · Friterie</div>
+        </div>
+        <div class="meta">
+          <div>☎ <span class="b">03 27 65 80 36</span> · <span class="b">03 27 59 62 89</span></div>
+          <div>Route de Landrecies, 59720 Louvroil</div>
+        </div>
+        <div class="liseret"></div>
+      </div>
+    </div>
+
+    <div class="face face-verso">
+      <div class="etiquette">Verso</div>
+      <div class="card verso">
+        <div class="bande"></div>
+        <div class="gauche">
+          <img class="qr" src="qr-chezmex.png" alt="QR — commander en ligne">
+          <div class="cta">Commandez<br>en ligne</div>
+          <div class="scan">Scannez ou approchez la carte</div>
+        </div>
+        <div class="droite">
+          <div class="titre">Chez Mex</div>
+          <div class="item"><span class="k">Sur place · à emporter · livraison</span>Minimum 20&nbsp;€ en livraison, ~10&nbsp;km autour de Louvroil</div>
+          <div class="item"><span class="k">Ouvert</span>Mar–jeu &amp; sam–dim : <span class="b">11h30–14h / 18h–22h</span><br>Ven : <span class="b">18h–22h</span> · lun : fermé</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="impression">
+    <b>Impression :</b> Ctrl+P → format réel (100&nbsp;%, sans marges). Le fichier sort en deux pages de <b>85,6 × 54 mm</b> exactement — page 1 recto, page 2 verso — prêtes pour l'imprimeur (fond perdu à prévoir selon prestataire).
+  </div>
+</div>
+
+</body>
+</html>

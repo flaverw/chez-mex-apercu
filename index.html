@@ -762,13 +762,21 @@ Chez Mex votre fast-food/restaurant/friterie situé dans un cadre naturel au bor
 <i class="fa fa-phone my-float"></i>
 </a>
 <a href="#ew-module" onclick="ewScroll(event)" class="ew-float">🛒 Commander en ligne</a>
+<a href="reprise/" id="ew-switch" class="ew-switch">◇ Voir l'autre version</a>
 <div class="ew-demo-banner">⚑ Démonstration <b>Everywhere</b> — le site de Chez Mex, tel quel + notre module greffé</div>
 <style>
 .ew-float{position:fixed;left:16px;bottom:18px;z-index:9990;background:#f7be27;color:#161616;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:.88rem;text-decoration:none;padding:13px 18px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.ew-switch{position:fixed;left:16px;bottom:72px;z-index:9990;background:#161616;color:#f7be27;border:1.5px solid #f7be27;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.7px;font-weight:500;font-size:.78rem;text-decoration:none;padding:11px 16px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.ew-switch:hover{background:#242424;color:#f7be27}
 .ew-demo-banner{position:fixed;bottom:0;left:0;right:0;z-index:9980;background:repeating-linear-gradient(45deg,#161616,#161616 14px,#222 14px,#222 28px);color:#fff;text-align:center;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.6px;text-transform:uppercase;padding:6px 90px 6px 12px}
 .ew-demo-banner b{color:#f7be27}
-@media(max-width:600px){.ew-float{font-size:.78rem;padding:11px 14px;bottom:34px}.ew-demo-banner{font-size:9px;padding:5px 8px}}
+@media(max-width:600px){.ew-float{font-size:.78rem;padding:11px 14px;bottom:34px}.ew-switch{font-size:.7rem;padding:9px 12px;bottom:82px}.ew-demo-banner{font-size:9px;padding:5px 8px}}
 </style>
+<script>
+/* La page porte un <base href="https://www.chez-mex.com/"> : on recalcule le lien
+   de la pastille par rapport à l'URL réelle de la démo, sinon il partirait vers le vrai site. */
+(function(){var s=document.getElementById('ew-switch');if(s){s.href=new URL('reprise/',window.location.href).href;}})();
+</script>
 <script>
 (function(){
 var EUR=function(n){return n.toFixed(2).replace('.',',')+' €';};
